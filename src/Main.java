@@ -1,19 +1,35 @@
 public class Main {
     public static void main(String[] args) {
-        //for (int i = 2020; i < 2070; i = i + 4) {
-        //    System.out.println("Высчокосные год: " + i);
-        //}
 
-        int salary = 65535;
-        int total = 0;
-        int i = 0;
-        for (; total < 1_000_000; i++) {
-            total = total + total/100;
-            total = total + salary;
-            if (i % 5 == 0) {
-                System.out.println("Месяц " + i + " Итого " + total);
+        //Задача с цифрами от 1 до 10
+        int i = 1;
+        while (i<=10) {
+            System.out.print(i + " ");
+            i++;
+        }
+        System.out.println("");
+        for (i = 10; i >= 1; i = i - 1){
+            System.out.print(i + " ");
+        }
+        System.out.println(" ");
+
+        //Задача про пятницы
+        int fridayDay = 1;
+        for (int j = fridayDay;  j <= 31; j = j + 7) {
+            System.out.println("Сегодня пятница, " + j  + "-е число. Необходимо подготовить отчет.");
+        }
+        System.out.println(" ");
+
+        //Задача про комету
+        int yearStart = 2021;
+        int yearFinish = 2121;
+        for (int k = 0; k <= yearStart + 100; k++) {
+            if (k % 79 == 0) {
+                if (k >= yearStart - 200) {
+                    System.out.println(k);
+                }
             }
         }
-        System.out.println(total + " За " + i + " месяцев");
+
     }
 }
